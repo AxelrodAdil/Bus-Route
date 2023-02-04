@@ -11,3 +11,13 @@ docker stop $(docker ps -aq)
 ```shell
 docker rmi -f $(docker images -q)
 ```
+
+========================
+
+```shell
+redis-cli KEYS '*'
+```
+
+```shell
+redis-cli flushall
+```
