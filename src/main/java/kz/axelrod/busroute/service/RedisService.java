@@ -22,22 +22,22 @@ public class RedisService {
     }
 
     public void saveData(String key, Object data) {
-        log.info("REDIS --- save data {} with key {}", data, key);
+        log.info("REDIS --- save data '{}' with key '{}'", data, key);
         redisTemplate.opsForValue().set(key, data);
     }
 
     public Object getData(String key) {
-        log.info("REDIS --- retrieve data with key {}", key);
+        log.info("REDIS --- retrieve data with key '{}'", key);
         return redisTemplate.opsForValue().get(key);
     }
 
     public void deleteData(String key) {
-        log.info("REDIS --- delete data with key {}", key);
+        log.info("REDIS --- delete data with key '{}'", key);
         redisTemplate.delete(key);
     }
 
     public Boolean hasKeyOfData(String key) {
-        log.info("REDIS --- has key of data {}", key);
+        log.info("REDIS --- has key of data '{}'", key);
         return redisTemplate.hasKey(key);
     }
 }
