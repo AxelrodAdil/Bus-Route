@@ -1,7 +1,3 @@
 spring:
-  redis:
-    hostname: localhost
-  data:
-    redis:
-      database: 0
-      port: 6379
+  profiles:
+    active: local
